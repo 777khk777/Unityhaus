@@ -1,0 +1,26 @@
+name: Deploy to Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.unityhaus.ca
+          username: peter@unityhaus.ca
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 921
+          server-dir: /public_html/
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .DS_Store

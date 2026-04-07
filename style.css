@@ -1,0 +1,276 @@
+:root {
+  --mint: #93E9BE;
+  --lavender: #C8A2C8;
+  --dark: #0b1020;
+  --light: #f8fafc;
+  --muted: #a1a1aa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.7;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 2.5rem;
+  z-index: 100;
+}
+
+.logo {
+  height: 64px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 2rem 4rem;
+  background:
+    url("https://unityhaus.ca/passive%20house%20gemini.png")
+    center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(11,16,32,0.65),
+      rgba(11,16,32,0.85)
+    );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.highlight-mint {
+  color: var(--mint);
+}
+
+.highlight-lavender {
+  color: var(--lavender);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #e5e7eb;
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--mint), var(--lavender));
+  color: #000;
+}
+
+.btn-secondary {
+  border: 1px solid var(--lavender);
+  color: var(--lavender);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* Sections */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section.alt {
+  background: linear-gradient(
+    180deg,
+    rgba(200,162,200,0.05),
+    rgba(147,233,190,0.05)
+  );
+}
+
+.section h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  color: var(--muted);
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  padding: 2.2rem;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--mint);
+}
+
+/* Videos */
+.videos .video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.videos iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+}
+
+.video-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.video-link a {
+  color: var(--mint);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* CTA */
+.cta {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(147,233,190,0.18),
+    rgba(200,162,200,0.18)
+  );
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-left p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-left a {
+  color: var(--mint);
+  text-decoration: none;
+}
+
+
+.footer-re-link {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-re-link a {
+  text-decoration: underline;
+}
+
+
+.footer-right iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  border-radius: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    height: 52px;
+  }
+
+  .videos iframe {
+    height: 320px;
+  }
+}
+
+/* Videos (API-driven) */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2rem;
+}
+
+.videos-grid iframe {
+  width: 100%;
+  height: 240px;
+  border: none;
+  border-radius: 16px;
+  background: #000;
+}
