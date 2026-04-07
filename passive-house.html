@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is a Passive House? – UnityHaus</title>
+  <link rel="icon" type="image/png" href="https://unityhaus.ca/Unityhaus%20logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ph-hero {
+      padding: 10rem 2rem 5rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(147,233,190,0.08), transparent);
+    }
+
+    .ph-hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .ph-hero p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .ph-article {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2rem 8rem;
+    }
+
+    .ph-article h2 {
+      font-size: 1.7rem;
+      color: var(--mint);
+      margin: 3rem 0 1rem;
+    }
+
+    .ph-article p {
+      margin-bottom: 1.2rem;
+      color: #d1d5db;
+      font-size: 1rem;
+    }
+
+    .ph-article a {
+      color: var(--mint);
+      text-decoration: underline;
+    }
+
+    .principles {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+
+    .principle {
+      padding: 1.6rem 2rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 3px solid var(--mint);
+    }
+
+    .principle h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--light);
+      margin-bottom: 0.5rem;
+    }
+
+    .principle p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #a1a1aa;
+    }
+
+    .phpp-outputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+
+    .phpp-block {
+      padding: 1.4rem 1.6rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .phpp-block h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--lavender);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .phpp-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .phpp-block ul li {
+      font-size: 0.9rem;
+      color: #a1a1aa;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .phpp-block ul li:last-child {
+      border-bottom: none;
+    }
+
+    .ph-callout {
+      margin: 2.5rem 0;
+      padding: 1.8rem 2rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(147,233,190,0.1), rgba(200,162,200,0.1));
+      border: 1px solid rgba(147,233,190,0.2);
+      font-size: 1.05rem;
+      color: var(--light);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--mint);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .phpp-outputs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <a href="index.html">
+    <img
+      src="https://unityhaus.ca/Unityhaus%20logo%20with%20a%20line.png"
+      alt="UnityHaus logo"
+      class="logo"
+    />
+  </a>
+  <nav class="header-nav">
+    <a href="index.html" class="btn-nav">← Back to Home</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="ph-hero">
+  <h1><span class="highlight-mint">What is a</span> <span class="highlight-lavender">Passive House?</span></h1>
+  <p>A rigorous building standard that delivers exceptional comfort, air quality, and energy efficiency — built on physics, not promises.</p>
+</div>
+
+<!-- ================= ARTICLE ================= -->
+<article class="ph-article">
+
+  <h2>A Standard Rooted in Science</h2>
+  <p>
+    The term "Passive House" comes from the German <em>Passivhaus</em>, where <em>haus</em> refers not only to residential homes but to any building type — offices, schools, multi-family, commercial. The Passive House standard applies universally.
+  </p>
+  <p>
+    The concept has deeper roots than many people realize. In 1977, the
+    <a href="https://www.src.sk.ca/blog/closer-look-saskatchewan-conservation-house-and-four-others" target="_blank" rel="noopener">Saskatchewan Conservation House</a>
+    in Regina became one of the world's first super-insulated buildings — demonstrating dramatically reduced energy demand decades before any formal standard existed.
+  </p>
+  <p>
+    Building on that foundation, Dr. Wolfgang Feist constructed the first certified Passive House in Darmstadt, Germany in 1991 and subsequently founded the Passive House Institute (PHI), which formalized the performance criteria that builders and designers follow worldwide today.
+  </p>
+
+  <h2>The Five Core Principles</h2>
+  <p>Every Passive House — regardless of climate, size, or building type — is designed around five fundamental principles.</p>
+
+  <div class="principles">
+    <div class="principle">
+      <h3>1. High-Quality Insulation</h3>
+      <p>Think of it as a thick winter jacket wrapped around your entire building. Generous, continuous insulation dramatically reduces heat loss in winter and heat gain in summer — so the building holds its temperature with minimal mechanical assistance.</p>
+    </div>
+    <div class="principle">
+      <h3>2. Thermal Bridge-Free Design</h3>
+      <p>Different materials conduct heat at very different rates — steel transfers heat rapidly, while materials like sheep's wool do so very slowly. A thermal bridge is any structural path that allows heat to bypass the insulation layer. Eliminating these hidden "energy highways" is essential to keeping the building envelope performing as designed.</p>
+    </div>
+    <div class="principle">
+      <h3>3. Airtight Construction</h3>
+      <p>Air is a carrier of both heat and moisture. Uncontrolled air movement through gaps and joints in the building envelope wastes energy, risks moisture damage, and compromises indoor air quality. An airtight shell ensures that all air exchange happens intentionally and on your terms.</p>
+    </div>
+    <div class="principle">
+      <h3>4. High-Quality Windows and Doors</h3>
+      <p>Even the highest-performing window is thermally inferior to a well-insulated wall — but windows are non-negotiable. They provide daylight, views, ventilation, and connection to the outdoors. Passive House requires high-performance glazing to minimize that trade-off as much as possible.</p>
+    </div>
+    <div class="principle">
+      <h3>5. Mechanical Ventilation with Heat Recovery</h3>
+      <p>A highly airtight envelope means fresh air must be supplied intentionally. A Heat Recovery Ventilator (HRV) continuously delivers filtered outdoor air while capturing up to 90% of the heat energy from the outgoing stale air — keeping the home fresh without wasting the energy already used to condition it.</p>
+    </div>
+  </div>
+
+  <h2>The Role of PHPP Energy Modelling</h2>
+  <p>
+    What sets Passive House apart from most building standards is its reliance on the <strong>Passive House Planning Package (PHPP)</strong> — a detailed, Excel-based energy modelling tool developed by PHI. Before construction begins, PHPP uses precise inputs (local climate data, building geometry, shading from adjacent structures, window specifications, and mechanical system details) to predict how the building will actually perform.
+  </p>
+  <p>Key outputs include:</p>
+
+  <div class="phpp-outputs">
+    <div class="phpp-block">
+      <h4>Heating</h4>
+      <ul>
+        <li>Annual heating demand</li>
+        <li>Peak heating load</li>
+      </ul>
+    </div>
+    <div class="phpp-block">
+      <h4>Cooling &amp; Summer Comfort</h4>
+      <ul>
+        <li>Frequency of overheating</li>
+        <li>Annual cooling demand</li>
+        <li>Peak cooling load</li>
+        <li>Frequency of high humidity</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    This level of detail allows designers to identify and resolve performance issues on paper rather than after the building is built. If you are planning a major renovation, it is worth asking your contractor whether energy modelling is part of their process.
+  </p>
+
+  <h2>What It Means in Practice</h2>
+  <p>
+    A typical Passive House consumes <strong>80–90% less energy</strong> for heating and cooling than a home built to the minimum building code. For a standard that has only existed for about 30 years, that is a remarkable achievement — and interest is growing steadily as energy costs rise and comfort expectations increase.
+  </p>
+
+  <div class="ph-callout">
+    Certification is entirely optional. If you want the official PHI plaque beside your front door, a certified Passive House Certifier can guide you through the process — though it does add cost to your project. Many homeowners and builders simply apply Passive House principles and use PHPP without pursuing formal certification, and achieve all the same performance benefits. Both paths are valid. I am one of those people who chose the latter.
+  </div>
+
+  <br />
+  <a href="index.html" class="back-link">← Back to UnityHaus</a>
+
+</article>
+
+</body>
+</html>
