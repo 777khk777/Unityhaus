@@ -42,19 +42,20 @@ body {
 
 .btn-nav {
   display: inline-block;
-  padding: 0.55rem 1.2rem;
+  padding: 0.65rem 1.4rem;
   border-radius: 999px;
-  border: 1px solid var(--mint);
-  color: var(--mint);
+  background: linear-gradient(135deg, var(--mint), var(--lavender));
+  color: #000;
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: background 0.2s ease, color 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-nav:hover {
-  background: var(--mint);
-  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.55);
 }
 
 .logo {
