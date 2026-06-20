@@ -531,7 +531,16 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 0 1.25rem; }
-    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--cream-border); padding: 1rem 1.25rem 1.5rem; gap: 0; z-index: 99; }
+    .nav-links.open a { padding: 0.75rem 0; border-bottom: 1px solid var(--cream-border); font-size: 16px; color: var(--stone); }
+    .nav-links.open a:last-child { border-bottom: none; }
+    .nav-links.open a.nav-cta { margin-top: 0.5rem; text-align: center; border: none; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--stone); border-radius: 2px; transition: all 0.2s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .hero { padding: 3.5rem 1.25rem 3rem; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 1.25rem; gap: 1rem; }
     .stat-item { border-right: none; padding: 0; border-bottom: 1px solid rgba(126,201,168,0.15); padding-bottom: 0.75rem; }
@@ -559,9 +568,12 @@
     <a href="#build">What we build</a>
     <a href="#adu">ADU project</a>
     <a href="#about">About</a>
-    <a href="/blog" class="nav-blog-link">Blog</a>
+    <a href="https://unityhaus.ca/blog" class="nav-blog-link">Blog</a>
     <a href="mailto:info@unityhaus.ca" class="nav-cta">Contact</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" style="display:none">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -647,7 +659,7 @@
   <div class="section-inner">
     <div class="eyebrow">The standard</div>
     <h2 class="section-h">What is Passive House?</h2>
-    <p class="ph-intro">Passive House (Passivhaus) is the world's most rigorous energy and comfort standard for buildings. It's not a style — it's a physics-based certification that guarantees your home uses a fraction of the energy of a conventional build while maintaining a healthier, more comfortable indoor environment year-round. Every UnityHaus ADU is designed and built to meet this standard.</p>
+    <p class="ph-intro">Passive House (Passivhaus) is the world's most rigorous energy and comfort standard for buildings. It's not a style — it's a physics-based science that guarantees your home uses a fraction of the energy of a conventional build while maintaining a healthier, more comfortable indoor environment year-round. Every UnityHaus ADU is designed and built to meet this standard.</p>
     <div class="card-grid">
       <div class="card">
         <div class="card-icon">
@@ -781,7 +793,7 @@
     </div>
     <div class="founder-right">
       <div class="founder-avatar">PK</div>
-      <p class="founder-bio">UnityHaus is based in Oshawa, Ontario. The Oshawa ADU project is the company's first complete proof of concept — documented publicly from permit to certification so the whole industry can learn from it.</p>
+      <p class="founder-bio">UnityHaus is based in Oshawa, Ontario. The Oshawa ADU project is the company's first complete proof of concept — documented publicly from permit to occupancy so the whole industry can learn from it.</p>
       <div class="re-link-block">
         <div class="re-label">Also active in Durham real estate</div>
         <a href="https://market.unityhaus.ca/" class="re-link" target="_blank">Visit market.unityhaus.ca &rarr;</a>
@@ -812,5 +824,30 @@
   </div>
 </footer>
 
+
+<script>
+  (function(){
+    var btn = document.getElementById('hamburger');
+    var links = document.querySelector('.nav-links');
+    function isMobile(){ return window.innerWidth <= 768; }
+    function update(){
+      btn.style.display = isMobile() ? 'flex' : 'none';
+      if(!isMobile()){ links.classList.remove('open'); links.style.display = ''; }
+    }
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+    window.addEventListener('resize', update);
+    update();
+    // Close menu when a link is clicked
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('open');
+        links.classList.remove('open');
+      });
+    });
+  })();
+</script>
 </body>
 </html>
