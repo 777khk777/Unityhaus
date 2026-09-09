@@ -3,19 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is a Passive House? — UnityHaus</title>
-<meta name="description" content="How Passive House works: the five core principles, PHPP energy modelling, and what 80–90% lower energy use means in practice — explained by UnityHaus in Oshawa, Ontario." />
-<link rel="canonical" href="https://unityhaus.ca/passive-house.html" />
+<title>Blower Door Testing for Builders — UnityHaus</title>
+<meta name="description" content="Mid-construction blower door testing in Durham Region and the GTA. We depressurize the shell and find the leaks with your trades on site, while the wall is still open." />
+<link rel="canonical" href="https://unityhaus.ca/blower-door-test.html" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://unityhaus.ca/passive-house.html" />
-<meta property="og:title" content="What is a Passive House? — UnityHaus" />
-<meta property="og:description" content="The five core principles, PHPP energy modelling, and what 80–90% lower energy use means in practice." />
+<meta property="og:url" content="https://unityhaus.ca/blower-door-test.html" />
+<meta property="og:title" content="Blower Door Testing for Builders — UnityHaus" />
+<meta property="og:description" content="Anyone can hand you an ACH50 number. We find the leaks while the wall is still open." />
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Blower door testing",
+  "name": "Mid-construction and final blower door testing",
+  "description": "Private quality-assurance airtightness testing for builders: a mid-construction leak hunt at air barrier completion, plus final verification.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "UnityHaus",
+    "url": "https://unityhaus.ca/",
+    "email": "info@unityhaus.ca",
+    "address": { "@type": "PostalAddress", "addressLocality": "Oshawa", "addressRegion": "ON", "addressCountry": "CA" }
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Durham Region" },
+    { "@type": "AdministrativeArea", "name": "Greater Toronto Area" }
+  ]
+}
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -295,6 +315,51 @@
     .phpp-outputs { grid-template-columns: 1fr; }
     footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
   }
+
+  /* ── SERVICE CTA ── */
+  .bd-cta {
+    background: var(--green);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    margin: 3.5rem 0 0;
+    text-align: center;
+  }
+  .bd-cta h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--cream);
+    margin: 0 0 0.65rem;
+  }
+  .bd-cta p {
+    font-size: 16px;
+    color: #A8D9C0;
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 1.75rem;
+  }
+  .bd-btn {
+    display: inline-block;
+    background: var(--cream);
+    color: var(--green-dark);
+    padding: 0.85rem 1.9rem;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .bd-btn:hover { transform: translateY(-1px); text-decoration: none; }
+  .bd-scope {
+    background: var(--cream-mid);
+    border: 1px solid var(--cream-border);
+    border-radius: 10px;
+    padding: 1.6rem 1.9rem;
+    margin: 1.5rem 0 0;
+  }
+  .bd-scope p { font-size: 15px; margin-bottom: 0.9rem; }
+  .bd-scope p:last-child { margin-bottom: 0; }
 </style>
 </head>
 
@@ -324,96 +389,107 @@
   <div class="ph-hero-inner">
     <div class="ph-hero-eyebrow">
       <span></span>
-      Passive House standard
+      Diagnostic testing &middot; Durham Region &amp; GTA
     </div>
-    <h1>What is a Passive House?</h1>
-    <p class="ph-hero-sub">A rigorous building standard that delivers exceptional comfort, air quality, and energy efficiency — built on physics, not promises.</p>
+    <h1>Find the leaks while the wall is still open</h1>
+    <p class="ph-hero-sub">Anyone can hand you an ACH50 number. We depressurize the shell and walk it with your framer and your insulator, so the rim joist gets sealed the same afternoon we find it.</p>
   </div>
 </section>
 
 <!-- ── ARTICLE ── -->
 <article class="ph-article">
 
-  <h2>A Standard Rooted in Science</h2>
-  <p>
-    The term "Passive House" comes from the German <em>Passivhaus</em>, where <em>haus</em> refers not only to residential homes but to any building type — offices, schools, multi-family, commercial. The Passive House standard applies universally.
-  </p>
-  <p>
-    The concept has deeper roots than many people realize. In 1977, the
-    <a href="https://www.src.sk.ca/blog/closer-look-saskatchewan-conservation-house-and-four-others" target="_blank" rel="noopener">Saskatchewan Conservation House</a>
-    in Regina became one of the world's first super-insulated buildings — demonstrating dramatically reduced energy demand decades before any formal standard existed.
-  </p>
-  <p>
-    Building on that foundation, Dr. Wolfgang Feist constructed the first certified Passive House in Darmstadt, Germany in 1991 and subsequently founded the Passive House Institute (PHI), which formalized the performance criteria that builders and designers follow worldwide today.
-  </p>
+  <h2>The number is the cheap part</h2>
+  <p>A blower door test produces one number. That number tells you whether you passed. It doesn't tell you where the air went, which trade owns it, or whether it's still reachable.</p>
+  <p>By the time a final test reads 2.4 ACH50 instead of 1.5, the drywall is up and the leak is behind three trades' work. The test was accurate. It was just late.</p>
 
-  <h2>The Five Core Principles</h2>
-  <p>Every Passive House — regardless of climate, size, or building type — is designed around five fundamental principles.</p>
+  <h2>The mid-construction leak hunt</h2>
+  <p>We test once the air barrier is continuous and before insulation and drywall close it in. The shell holds pressure, and every penetration is still an arm's length away.</p>
+  <p>With the building held at 50 pascals we walk it with whoever is on site that day. The smoke pen shows the path at each detail. The thermal camera shows the cold. Your hand confirms it. Nobody leaves the site guessing which detail failed.</p>
 
+  <h2>Where it is always leaking</h2>
   <div class="principles">
     <div class="principle">
-      <h3>1. High-Quality Insulation</h3>
-      <p>Think of it as a thick winter jacket wrapped around your entire building. Generous, continuous insulation dramatically reduces heat loss in winter and heat gain in summer — so the building holds its temperature with minimal mechanical assistance.</p>
+      <h3>Rim joist</h3>
+      <p>Where the floor system meets the wall. The most reliable leak on a stick-built house, and the easiest thing in the building to seal before the insulator shows up.</p>
     </div>
     <div class="principle">
-      <h3>2. Thermal Bridge-Free Design</h3>
-      <p>Different materials conduct heat at very different rates — steel transfers heat rapidly, while materials like sheep's wool do so very slowly. A thermal bridge is any structural path that allows heat to bypass the insulation layer. Eliminating these hidden "energy highways" is essential to keeping the building envelope performing as designed.</p>
+      <h3>Electrical penetrations</h3>
+      <p>Every box, every wire pass-through, every pot light sitting in an insulated ceiling.</p>
     </div>
     <div class="principle">
-      <h3>3. Airtight Construction</h3>
-      <p>Air is a carrier of both heat and moisture. Uncontrolled air movement through gaps and joints in the building envelope wastes energy, risks moisture damage, and compromises indoor air quality. An airtight shell ensures that all air exchange happens intentionally and on your terms.</p>
+      <h3>Bottom plate</h3>
+      <p>The gap between plate and subfloor runs the entire perimeter, and nobody looks at it twice.</p>
     </div>
     <div class="principle">
-      <h3>4. High-Quality Windows and Doors</h3>
-      <p>Even the highest-performing window is thermally inferior to a well-insulated wall — but windows are non-negotiable. They provide daylight, views, ventilation, and connection to the outdoors. Passive House requires high-performance glazing to minimize that trade-off as much as possible.</p>
+      <h3>Rough openings</h3>
+      <p>The shim gap around windows and doors, wherever the trade foamed it fast.</p>
     </div>
     <div class="principle">
-      <h3>5. Mechanical Ventilation with Heat Recovery</h3>
-      <p>A highly airtight envelope means fresh air must be supplied intentionally. A Heat Recovery Ventilator (HRV) continuously delivers filtered outdoor air while capturing up to 90% of the heat energy from the outgoing stale air — keeping the home fresh without wasting the energy already used to condition it.</p>
+      <h3>Top plates and partitions</h3>
+      <p>Interior walls that stop short of the air barrier vent straight into the attic.</p>
+    </div>
+    <div class="principle">
+      <h3>Mechanical penetrations</h3>
+      <p>Every stack, dryer vent and HRV port that crosses the envelope.</p>
     </div>
   </div>
+  <p>And the attic hatch, which is usually the last thing built and the first thing forgotten.</p>
 
-  <h2>The Role of PHPP Energy Modelling</h2>
-  <p>
-    What sets Passive House apart from most building standards is its reliance on the <strong>Passive House Planning Package (PHPP)</strong> — a detailed, Excel-based energy modelling tool developed by PHI. Before construction begins, PHPP uses precise inputs (local climate data, building geometry, shading from adjacent structures, window specifications, and mechanical system details) to predict how the building will actually perform.
-  </p>
-  <p>Key outputs include:</p>
+  <h2>What a failed final actually costs</h2>
+  <div class="ph-callout">
+    <p>A failed final test isn't a bad afternoon. It's a rework sequence.</p>
+    <p>The air barrier is behind drywall, paint and trim. Finding the leak means opening finished work. Fixing it means bringing back a trade that has moved on to another site. Proving it means a second test. On an ENERGY STAR or Net Zero project the label is gated behind the result, so the closing gets gated behind it too.</p>
+    <p style="margin-bottom:0">Measured against a lost week of schedule and a re-test, catching it at the air barrier stage isn't a line item worth arguing about.</p>
+  </div>
 
+  <h2>Mid and final, booked together</h2>
+  <p>The default engagement is two visits.</p>
   <div class="phpp-outputs">
     <div class="phpp-block">
-      <h4>Heating</h4>
+      <h4>Mid-construction &middot; diagnostic</h4>
       <ul>
-        <li>Annual heating demand</li>
-        <li>Peak heating load</li>
+        <li>Run at air barrier completion</li>
+        <li>Full walkthrough under pressure with your trades</li>
+        <li>Punch list acted on before anything closes</li>
+        <li>This is where the value is</li>
       </ul>
     </div>
     <div class="phpp-block">
-      <h4>Cooling &amp; Summer Comfort</h4>
+      <h4>Final &middot; verification</h4>
       <ul>
-        <li>Frequency of overheating</li>
-        <li>Annual cooling demand</li>
-        <li>Peak cooling load</li>
-        <li>Frequency of high humidity</li>
+        <li>Run at substantial completion</li>
+        <li>Documented ACH50 and CFM50 result</li>
+        <li>The number you hand to the program or the client</li>
+        <li>Confirms the fixes held</li>
       </ul>
     </div>
   </div>
+  <p>Booking both at once comes in under two separate call-outs, and you get a scheduled second visit instead of a re-quote three months later. Single tests are available when that's what the job needs.</p>
 
-  <p>
-    This level of detail allows designers to identify and resolve performance issues on paper rather than after the building is built. If you are planning a major renovation, it is worth asking your contractor whether energy modelling is part of their process.
-  </p>
-
-  <h2>What It Means in Practice</h2>
-  <p>
-    A typical Passive House consumes <strong>80–90% less energy</strong> for heating and cooling than a home built to the minimum building code. For a standard that has only existed for about 30 years, that is a remarkable achievement — and interest is growing steadily as energy costs rise and comfort expectations increase.
-  </p>
-
-  <div class="ph-stat">
-    <div class="ph-stat-number">80–90%</div>
-    <div class="ph-stat-label">less heating &amp; cooling energy<br>than a code-built home</div>
+  <h2>What you get</h2>
+  <div class="phpp-block">
+    <ul>
+      <li>A punch list called out on site the same day, not emailed two weeks later</li>
+      <li>ACH50 and CFM50 results — the metrics ENERGY STAR, Net Zero and Passive House programs score on</li>
+      <li>Photo and thermal documentation of every leak located</li>
+      <li>A written report you can hand to a client or a program reviewer</li>
+      <li>Re-test verification after the fixes are made</li>
+    </ul>
   </div>
 
-  <div class="ph-callout">
-    Certification is entirely optional. If you want the official PHI plaque beside your front door, a certified Passive House Certifier can guide you through the process — though it does add cost to your project. Many homeowners and builders simply apply Passive House principles and use PHPP without pursuing formal certification, and achieve all the same performance benefits. Both paths are valid. I am one of those people who chose the latter.
+  <h2>Who tests, and what we don't do</h2>
+  <p>Testing is run by Peter Kim, a Certified Passive House Tradesperson, using our own Retrotec blower door and digital manometer, a Retrotec smoke pen, and a FLIR thermal camera.</p>
+  <div class="bd-scope">
+    <p>To be straight about scope: this is private quality-assurance testing for builders.</p>
+    <p>Issuing official EnerGuide or ENERGY STAR results requires a Registered Energy Advisor working under an NRCan service organization, and Passive House certification testing carries its own qualified-tester requirement. We aren't that, and we'll say so when your project needs one.</p>
+    <p>What we do is make sure that when the official test happens, it passes.</p>
+  </div>
+
+  <div class="bd-cta">
+    <h2>Have a shell going up?</h2>
+    <p>Tell us where the project is and when the air barrier closes in. We'll tell you the right week to test.</p>
+    <a href="mailto:info@unityhaus.ca?subject=Blower%20door%20test%20enquiry" class="bd-btn">Book a leak hunt &rarr;</a>
   </div>
 
   <a href="/" class="back-link">&larr; Back to UnityHaus</a>
