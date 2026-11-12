@@ -1,0 +1,29 @@
+# UnityHaus
+
+> UnityHaus is a design-build company in Oshawa, Ontario, Canada that designs and builds luxury Passive House accessory dwelling units (ADUs, also called garden suites or backyard homes) in Durham Region and the Greater Toronto Area (GTA). It also offers mid-construction and final blower door (airtightness) testing for builders. Founder: Peter Kim, Certified Passive House Tradesperson (CPHT), CPA, MBA, and licensed real estate broker in Durham Region. Contact: info@unityhaus.ca.
+
+Key facts:
+
+- Service area: Oshawa, Whitby, Ajax, Pickering, Clarington (Courtice, Bowmanville), Scugog, Uxbridge, Brock, and the wider GTA including Toronto.
+- What UnityHaus builds: detached backyard ADUs designed and built to the Passive House standard and modelled in PHPP, with design, permits, construction and finishes managed start to finish. Typical clients are families housing an aging parent or adult child on the same lot.
+- Performance: up to 90% less heating and cooling energy than a code-built home, 0.6 ACH50 airtightness target, triple-glazed windows, continuous heat/energy recovery ventilation, envelope designed for a 100-year life.
+- Typical cost (2026): about $350,000–$500,000 for a 500–800 sq ft detached Passive House ADU in Durham Region or the GTA (roughly $550–$700 per sq ft), including design, permits, construction and finishes. Planning range, not a quote.
+- Case study: a 600 sq ft, one-bedroom Passive House ADU in Oshawa, publicly documented with real specs, timeline and costs (projected $290,000–$360,000 including HST, owner-managed at cost).
+- Blower door testing: private quality-assurance testing for builders with a Retrotec 5100 blower door, smoke generator and FLIR thermal camera. UnityHaus does not issue official EnerGuide or ENERGY STAR results.
+
+## Main pages
+
+- [Home](https://unityhaus.ca/): Passive House ADU design-build in Oshawa, Durham Region and the GTA.
+- [FAQ](https://unityhaus.ca/faq.html): 66 questions and answers on Ontario ADU rules, Passive House, costs, process, the Oshawa build and blower door testing.
+- [Passive House ADU cost in Ontario](https://unityhaus.ca/passive-house-adu-cost.html): price ranges by size, cost breakdown, Passive House premium, running costs.
+- [Oshawa Passive House ADU case study](https://unityhaus.ca/oshawa-adu.html): specifications, wall and roof assemblies, timeline, costs and lessons learned.
+- [What is a Passive House?](https://unityhaus.ca/passive-house.html): the five principles, PHPP energy modelling, certification.
+- [Blower door testing for builders](https://unityhaus.ca/blower-door-test.html): mid-construction leak hunts and final ACH50/CFM50 verification in Durham Region and the GTA.
+
+## More
+
+- [Blog](https://blog.unityhaus.ca): build updates and Passive House articles.
+- [About Peter Kim](https://blog.unityhaus.ca/about): founder background.
+- [YouTube](https://www.youtube.com/@Unityhaus-Canada/videos): Oshawa ADU build videos.
+- [Durham real estate](https://market.unityhaus.ca/): Peter Kim's real estate market site.
+- [Privacy policy](https://unityhaus.ca/privacy.html)
