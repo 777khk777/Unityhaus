@@ -422,6 +422,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   }
 </style>
+<link rel="stylesheet" href="/motion.css">
 </head>
 
 <body>
@@ -461,12 +462,22 @@
 <p class="answer-first">A complete detached Passive House ADU in Durham Region or the Greater Toronto Area typically costs <strong>about $350,000 to $500,000</strong> for 500–800 sq ft, or roughly <strong>$550–$700 per square foot</strong>, including design, permits, construction, mechanical systems and finishes. Smaller ADUs cost more per square foot, because the kitchen, bathroom, electrical panel, ventilation and heat pump cost about the same at any size.</p>
 <p>These are 2026 planning ranges from UnityHaus, based on our own Oshawa build and current Ontario trade and material prices. They are not a quote; every lot is different.</p>
 
+<div class="mx-range" data-mx="range">
+  <div class="mx-range-n">$<span data-count="350" data-sep="1" data-mult="1000">350,000</span> – $<span data-count="500" data-sep="1" data-mult="1000">500,000</span></div>
+  <div class="mx-range-sub">about $<span data-count="550">550</span>–$<span data-count="700">700</span> per sq ft · detached Passive House ADU, 500–800 sq ft, Durham Region &amp; GTA</div>
+</div>
+
 <h2>Cost by size</h2>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>ADU type</th><th>Size</th><th class="num">Typical all-in cost</th></tr></thead><tbody><tr><td>Studio or compact one-bedroom</td><td>400–500 sq ft</td><td class="num">$300,000–$375,000</td></tr><tr><td>One-bedroom</td><td>550–650 sq ft</td><td class="num">$350,000–$450,000</td></tr><tr><td>Two-bedroom</td><td>700–850 sq ft</td><td class="num">$425,000–$525,000</td></tr></tbody></table></div>
 <p class="table-note">Includes design, engineering, permits, site work, construction, mechanical systems and mid-range finishes. Excludes HST, development charges where they apply, furniture and major landscaping.</p>
 
 <h2>Where the money goes</h2>
 <p>On our 600 sq ft <a href="/oshawa-adu.html">Oshawa Passive House ADU</a>, the budget splits roughly like this:</p>
+<div class="mx-stage" data-mx="stack">
+  <p class="mx-cap">Where the money goes · Oshawa ADU</p>
+  <div class="mx-stack" role="img" aria-label="Budget split: design and permits about 7%, site and slab 12%, framing 15%, envelope 25%, mechanical and electrical 14%, interior finishes 22%, landscaping 4%."></div>
+  <div class="mx-legend"></div>
+</div>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Category</th><th class="num">Share of cost</th></tr></thead><tbody><tr><td>Design, engineering, surveys and permits</td><td class="num">about 7%</td></tr><tr><td>Site work and insulated slab foundation</td><td class="num">about 12%</td></tr><tr><td>Framing</td><td class="num">about 15%</td></tr><tr><td>Building envelope: windows, insulation, air barrier, roof, siding, shading</td><td class="num">about 25%</td></tr><tr><td>Mechanical, electrical and plumbing, including ventilation and heat pump</td><td class="num">about 14%</td></tr><tr><td>Interior finishes: drywall, flooring, kitchen, bathroom, doors</td><td class="num">about 22%</td></tr><tr><td>Landscaping and site restoration</td><td class="num">about 3–5%</td></tr></tbody></table></div>
 <p>The envelope is the biggest single share. That's where Passive House is different, and it's the part that pays you back every month in comfort and energy.</p>
 
@@ -563,5 +574,6 @@
     });
   })();
 </script>
+<script src="/motion.js" defer></script>
 </body>
 </html>

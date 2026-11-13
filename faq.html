@@ -330,7 +330,7 @@
       "name": "How long does a Passive House last?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "UnityHaus designs the building envelope for a 100-year service life. Continuous exterior insulation, an airtight and vapour-smart membrane system, and a ventilated rainscreen behind the cladding keep the structure warm and dry. Moisture detailing like this is what decides whether a house lasts 30 years or 100."
+        "text": "UnityHaus designs the building envelope to last 150 years or longer. Continuous exterior insulation, an airtight and vapour-smart membrane system, and a ventilated rainscreen behind the cladding keep the structure warm and dry. Moisture detailing like this is what decides whether a house lasts 30 years or 150."
       }
     },
     {
@@ -934,6 +934,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   }
 </style>
+<link rel="stylesheet" href="/motion.css">
 </head>
 
 <body>
@@ -965,7 +966,11 @@
     </div>
     <h1>Passive House ADUs: frequently asked questions</h1>
     <p class="ph-hero-sub">Plain answers about backyard ADUs in Ontario, the Passive House standard, building with UnityHaus in Oshawa, Durham Region and the GTA, and blower door testing.</p>
-    <p class="faq-updated">66 questions · Last updated November 12, 2026</p>
+        <div data-mx="ask">
+      <div class="mx-ask"><svg viewBox="0 0 24 24" fill="none" stroke="#1E7A52" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><div class="mx-typed" aria-hidden="true"><span class="mx-typed-text">How much does a Passive House ADU cost?</span><span class="mx-caret"></span></div></div>
+      <div class="mx-answer" aria-hidden="true"><b>About $350,000–$500,000</b> for 500–800 sq ft in Durham Region or the GTA.</div>
+    </div>
+    <p class="faq-updated" data-mx="count"><span data-count="66">66</span> questions · Last updated November 12, 2026</p>
   </div>
 </section>
 
@@ -1129,7 +1134,7 @@
   </details>
   <details class="faq-item" id="how-long-does-a-passive-house-last">
     <summary><h3>How long does a Passive House last?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
-    <div class="faq-answer"><p>UnityHaus designs the building envelope for a 100-year service life. Continuous exterior insulation, an airtight and vapour-smart membrane system, and a ventilated rainscreen behind the cladding keep the structure warm and dry. Moisture detailing like this is what decides whether a house lasts 30 years or 100.</p></div>
+    <div class="faq-answer"><p>UnityHaus designs the building envelope to last 150 years or longer. Continuous exterior insulation, an airtight and vapour-smart membrane system, and a ventilated rainscreen behind the cladding keep the structure warm and dry. Moisture detailing like this is what decides whether a house lasts 30 years or 150.</p></div>
   </details>
 </section>
 <section class="faq-section" id="process">
@@ -1332,5 +1337,6 @@
     window.addEventListener('beforeprint', function(){ items.forEach(function(d){ d.open = true; }); });
   })();
 </script>
+<script src="/motion.js" defer></script>
 </body>
 </html>

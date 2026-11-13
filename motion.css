@@ -1,0 +1,95 @@
+/* UnityHaus motion graphics. Used by motion.js. Every graphic is complete at rest;
+   animations only run while an element has the .play class. */
+
+.mx-stage { background: #fff; border: 1px solid var(--cream-border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0 2rem; min-width: 0; }
+.mx-cap { font-size: 12px !important; letter-spacing: .1em; text-transform: uppercase; color: var(--green) !important; font-weight: 500; margin: 0 0 1rem !important; line-height: 1.4 !important; }
+.mx-section { padding: 4rem 2.5rem 1rem; }
+.mx-section-inner { max-width: 1080px; margin: 0 auto; }
+.mx-section h2 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; margin: 0 0 .5rem; color: var(--black); }
+.mx-section .mx-lead { color: var(--stone); font-size: 16px; line-height: 1.7; max-width: 62ch; margin: 0 0 .5rem; }
+@media (max-width: 768px) { .mx-section { padding: 3rem 1.25rem 0; } .mx-stage { padding: 1.1rem; } }
+
+/* ── wall: columns side by side, dashed leaders to labels ── */
+.mx-wall { position: relative; width: 100%; min-height: 200px; }
+.mx-wv-lab { position: absolute; left: 0; display: flex; align-items: center; gap: .4rem; font-size: 13.5px; color: var(--black); white-space: nowrap; line-height: 1; }
+.mx-wv-lab em { font-style: normal; color: var(--stone); font-variant-numeric: tabular-nums; }
+.mx-wv-sw { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.mx-wv-h { position: absolute; height: 0; border-top: 1px dashed var(--stone); opacity: .55; }
+.mx-wv-v { position: absolute; width: 0; border-left: 1px dashed var(--stone); opacity: .55; }
+.mx-wv-bar { position: absolute; bottom: 22px; transform-origin: bottom; }
+.mx-wv-end { position: absolute; bottom: 0; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+.play .mx-wv-bar { animation: mx-rise .7s cubic-bezier(.2,.8,.2,1) both; }
+.play .mx-wv-lab, .play .mx-wv-h, .play .mx-wv-v { animation: mx-fadein .45s ease both; }
+.mx-wall-total { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin-top: 1rem; padding-top: .9rem; border-top: 1px solid var(--cream-border); font-size: 14px; color: var(--stone); }
+.mx-big { font-family: var(--font-serif); font-size: 1.5rem; color: var(--green); margin-right: .3rem; font-variant-numeric: tabular-nums; }
+@media (max-width: 520px) { .mx-wv-lab { font-size: 12px; } }
+
+/* ── ERV canvas ── */
+canvas.mx-erv { width: 100%; height: auto; aspect-ratio: 1000 / 580; display: block; max-width: 760px; margin: 0 auto; }
+
+/* ── energy bars ── */
+.mx-bars { display: grid; gap: .7rem; margin: .5rem 0 2rem; max-width: 560px; }
+.mx-bar-row { display: grid; grid-template-columns: 110px 1fr 4.5rem; gap: .75rem; align-items: center; font-size: 14px; color: var(--stone); }
+.mx-bar-row b { font-weight: 500; color: var(--black); text-align: right; font-variant-numeric: tabular-nums; }
+.mx-bar-track { height: 18px; background: var(--cream-mid); border-radius: 4px; overflow: hidden; }
+.mx-bar-fill { height: 100%; border-radius: 4px; transform-origin: left; }
+.play .mx-bar-fill { animation: mx-grow 1.4s cubic-bezier(.2,.8,.2,1) both; }
+
+/* ── blower door gauge & leaks ── */
+.mx-two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+.mx-two .mx-stage { margin: 0; }
+@media (max-width: 760px) { .mx-two { grid-template-columns: 1fr; } }
+.mx-stage svg { max-width: 100%; height: auto; display: block; }
+.mx-needle { transform-origin: 150px 150px; transition: transform 2.2s cubic-bezier(.3,.9,.3,1); }
+.mx-gauge-num { font-family: var(--font-serif); font-size: 2.4rem; color: var(--black); text-align: center; line-height: 1; font-variant-numeric: tabular-nums; margin-top: -.4rem; }
+.mx-gauge-sub { text-align: center; font-size: 13px; color: var(--stone); }
+.mx-ach { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; text-align: center; }
+.mx-ach .v { font-family: var(--font-serif); font-size: 1.9rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.mx-ach .l { font-size: 12.5px; color: var(--stone); line-height: 1.35; }
+.mx-puff { fill: #9A958C; opacity: 0; }
+.play .mx-puff { animation: mx-puff 2.4s ease-out infinite; }
+.mx-leak-dot { fill: #D9774A; }
+.play .mx-leak-dot { animation: mx-pulse 1.6s ease-in-out infinite; }
+
+/* ── FAQ ask box (on the green hero) ── */
+.mx-ask { display: flex; align-items: center; gap: .75rem; background: #fff; border-radius: 999px; padding: .8rem 1.2rem; margin-top: 1.6rem; max-width: 620px; min-height: 54px; box-shadow: 0 6px 24px rgba(0,0,0,.12); }
+.mx-ask svg { flex: none; width: 20px; height: 20px; }
+.mx-typed { font-size: 16px; color: var(--black); min-width: 0; overflow-wrap: anywhere; }
+.mx-caret { display: inline-block; width: 2px; height: 1.1em; background: var(--green); vertical-align: -3px; margin-left: 2px; animation: mx-blink 1s steps(1) infinite; }
+.mx-answer { margin-top: .8rem; max-width: 620px; font-size: 14.5px; color: var(--cream); background: var(--green-dark); border-radius: 10px; padding: .75rem 1rem; transition: opacity .4s; line-height: 1.5; }
+.mx-answer b { color: #fff; font-weight: 500; }
+
+/* ── cost range & stacked bar ── */
+.mx-range { margin: 1.5rem 0 1.75rem; padding: 1.4rem 1.5rem; background: var(--green-pale); border: 1px solid var(--green-light); border-radius: 12px; }
+.mx-range-n { font-family: var(--font-serif); font-size: clamp(2rem, 6vw, 3.2rem); color: var(--green); line-height: 1.05; font-variant-numeric: tabular-nums; }
+.mx-range-sub { color: var(--stone); font-size: 14.5px; margin-top: .4rem; line-height: 1.5; }
+.mx-stack { display: flex; height: 44px; border-radius: 8px; overflow: hidden; }
+.mx-seg { height: 100%; transform-origin: left; display: grid; place-items: center; font-size: 12.5px; font-weight: 500; color: #fff; overflow: hidden; }
+.play .mx-seg { animation: mx-grow .5s ease-out both; }
+.mx-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .35rem .9rem; margin-top: .9rem; font-size: 13px; color: var(--stone); }
+.mx-legend span { display: flex; gap: .5rem; align-items: center; }
+.mx-legend i { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+
+/* ── timeline draw ── */
+.timeline.mx-tl { position: relative; }
+.mx-tl-line { position: absolute; left: -2px; top: 0; width: 2px; background: var(--green); transform-origin: top; }
+.play .mx-tl-line { animation: mx-drawdown 3s ease-in-out both; }
+.play.timeline li.done::before { animation: mx-dotin .3s ease both; animation-delay: calc(var(--i) * .37s); }
+.timeline li.now::before { animation: mx-nowpulse 1.8s ease-in-out infinite; }
+
+@keyframes mx-rise { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes mx-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes mx-fadein { from { opacity: 0; } }
+@keyframes mx-puff { 0% { opacity: 0; transform: translate(0,0) scale(.4); } 15% { opacity: .55; } 100% { opacity: 0; transform: translate(26px,-22px) scale(1.6); } }
+@keyframes mx-pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes mx-blink { 50% { opacity: 0; } }
+@keyframes mx-drawdown { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes mx-dotin { from { background: var(--cream); transform: scale(.6); } to { background: var(--green); transform: scale(1); } }
+@keyframes mx-nowpulse { 0%,100% { box-shadow: 0 0 0 0 rgba(126,201,168,.7), 0 0 0 4px var(--green-light); } 50% { box-shadow: 0 0 0 7px rgba(126,201,168,0), 0 0 0 4px var(--green-light); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .play .mx-wv-bar, .play .mx-wv-lab, .play .mx-wv-h, .play .mx-wv-v, .play .mx-bar-fill, .play .mx-puff, .play .mx-leak-dot,
+  .mx-caret, .play .mx-seg, .play .mx-tl-line, .play.timeline li.done::before, .timeline li.now::before { animation: none !important; }
+  .mx-needle { transition: none !important; }
+  .mx-puff { opacity: 0 !important; }
+}

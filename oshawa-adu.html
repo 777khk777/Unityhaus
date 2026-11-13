@@ -422,6 +422,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   }
 </style>
+<link rel="stylesheet" href="/motion.css">
 </head>
 
 <body>
@@ -460,11 +461,11 @@
 
 <p class="answer-first">The Oshawa ADU is a 600 sq ft, one-bedroom, Passive House-standard backyard home that UnityHaus is building in Oshawa, Ontario for an aging parent. It is UnityHaus's first complete project and is documented publicly at every stage, including the real costs, so homeowners and builders can see exactly how a Passive House ADU gets built in Durham Region.</p>
 
-<div class="facts">
-  <div class="fact"><div class="fact-num">600 sq ft</div><div class="fact-label">37 × 16 ft, one storey, one bedroom</div></div>
-  <div class="fact"><div class="fact-num">0.6 ACH50</div><div class="fact-label">Passive House airtightness target</div></div>
-  <div class="fact"><div class="fact-num">R-60+</div><div class="fact-label">Typical wall assembly with 6" exterior mineral wool</div></div>
-  <div class="fact"><div class="fact-num">$290–360k</div><div class="fact-label">Projected cost incl. HST, at cost</div></div>
+<div class="facts" data-mx="facts">
+  <div class="fact"><div class="fact-num"><span data-count="600">600</span> sq ft</div><div class="fact-label">37 × 16 ft, one storey, one bedroom</div></div>
+  <div class="fact"><div class="fact-num"><span data-count="0.6" data-dec="1" data-from="5">0.6</span> ACH50</div><div class="fact-label">Passive House airtightness target</div></div>
+  <div class="fact"><div class="fact-num">R-<span data-count="60">60</span>+</div><div class="fact-label">Typical wall assembly with 6" exterior mineral wool</div></div>
+  <div class="fact"><div class="fact-num">$<span data-count="290">290</span>–<span data-count="360">360</span>k</div><div class="fact-label">Projected cost incl. HST, at cost</div></div>
 </div>
 
 <h2>Why this project exists</h2>
@@ -489,7 +490,7 @@
 </div>
 
 <h2>Timeline</h2>
-<ul class="timeline">
+<ul class="timeline" data-mx="timeline">
   <li class="done"><strong>Late 2024:</strong> architect engaged; design begins.</li>
   <li class="done"><strong>Early 2025:</strong> schematic and detailed design; the main house's electrical service upgraded from 100 A to 200 A to carry the new load.</li>
   <li class="done"><strong>Summer 2025:</strong> legal survey, demolition permit for the old structure, building permit application.</li>
@@ -581,5 +582,6 @@
     });
   })();
 </script>
+<script src="/motion.js" defer></script>
 </body>
 </html>

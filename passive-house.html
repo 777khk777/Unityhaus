@@ -333,6 +333,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   }
 </style>
+<link rel="stylesheet" href="/motion.css">
 </head>
 
 <body>
@@ -409,6 +410,11 @@
     </div>
   </div>
 
+    <div class="mx-stage" data-mx="erv">
+    <p class="mx-cap">How heat recovery works · a winter day</p>
+    <canvas class="mx-erv" width="1000" height="580" role="img" aria-label="An energy recovery ventilator: cold fresh air enters at the top left, crosses a diamond-shaped core and leaves at the bottom right warmed to 15°C; warm stale air enters at the top right, crosses the core the other way and leaves at the bottom left cooled to −9°C. 84% of the heat is kept inside."></canvas>
+  </div>
+
   <h2>The Role of PHPP Energy Modelling</h2>
   <p>
     What sets Passive House apart from most building standards is its reliance on the <strong>Passive House Planning Package (PHPP)</strong> — a detailed, Excel-based energy modelling tool developed by PHI. Before construction begins, PHPP uses precise inputs (local climate data, building geometry, shading from adjacent structures, window specifications, and mechanical system details) to predict how the building will actually perform.
@@ -443,9 +449,14 @@
     A typical Passive House consumes <strong>80–90% less energy</strong> for heating and cooling than a home built to the minimum building code. For a standard that has only existed for about 30 years, that is a remarkable achievement — and interest is growing steadily as energy costs rise and comfort expectations increase.
   </p>
 
-  <div class="ph-stat">
-    <div class="ph-stat-number">80–90%</div>
+  <div class="ph-stat" data-mx="count">
+    <div class="ph-stat-number"><span data-count="80">80</span>–<span data-count="90">90</span>%</div>
     <div class="ph-stat-label">less heating &amp; cooling energy<br>than a code-built home</div>
+  </div>
+
+    <div class="mx-bars" data-mx="bars" role="img" aria-label="Heating and cooling energy: a code-built home uses 100%, a Passive House about 10 to 20%.">
+    <div class="mx-bar-row">Code-built<div class="mx-bar-track"><div class="mx-bar-fill" style="width:100%;background:#D9774A"></div></div><b>100%</b></div>
+    <div class="mx-bar-row">Passive House<div class="mx-bar-track"><div class="mx-bar-fill" style="width:15%;background:var(--green);animation-delay:.3s"></div></div><b>10–20%</b></div>
   </div>
 
   <div class="ph-callout">
@@ -510,5 +521,6 @@
     });
   })();
 </script>
+<script src="/motion.js" defer></script>
 </body>
 </html>

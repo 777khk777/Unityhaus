@@ -636,6 +636,7 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 
@@ -671,38 +672,41 @@
       <a href="#approach" class="btn-primary">Our approach &rarr;</a>
       <a href="#adu" class="btn-ghost">Follow the Oshawa ADU build &rarr;</a>
     </div>
-    <div class="wall-strip">
-      <div style="background:#C4A87A;width:7%;color:#5C3D10">cladding</div>
-      <div style="background:#8B6340;width:5%;color:#F5E8D5">wrap</div>
-      <div style="background:#2A6B4A;width:30%;color:#A8E8C8">mineral wool</div>
-      <div style="background:#3D5C6B;width:10%;color:#B8D4E0">structure</div>
-      <div style="background:#2A6B4A;width:22%;color:#A8E8C8">mineral wool</div>
-      <div style="background:#5A4A3A;width:6%;color:#C8B89A">membrane</div>
-      <div style="background:#E8E0D0;width:20%;color:#5A5040">interior</div>
-    </div>
-    <p class="wall-caption">Typical Passive House wall assembly &middot; R-60+ continuous insulation</p>
   </div>
 </section>
 
 <!-- STATS -->
-<div class="stats-bar">
+<div class="stats-bar" data-mx="stats">
   <div class="stat-item">
-    <div class="stat-n">Up to 90%</div>
+    <div class="stat-n">Up to <span data-count="90">90</span>%</div>
     <div class="stat-l">less heating &amp; cooling energy than code</div>
   </div>
   <div class="stat-item">
-    <div class="stat-n">0.6</div>
+    <div class="stat-n"><span data-count="0.6" data-dec="1" data-from="5">0.6</span></div>
     <div class="stat-l">ACH50 airtightness target</div>
   </div>
   <div class="stat-item">
-    <div class="stat-n">Up to 75%</div>
+    <div class="stat-n">Up to <span data-count="75">75</span>%</div>
     <div class="stat-l">less outside noise</div>
   </div>
   <div class="stat-item">
-    <div class="stat-n">100 yr</div>
-    <div class="stat-l">building envelope design life</div>
+    <div class="stat-n"><span data-count="150">150</span>+ yr</div>
+    <div class="stat-l">designed to last 150 years or longer</div>
   </div>
 </div>
+
+<!-- WALL SECTION (animated) -->
+<section class="mx-section" id="wall">
+  <div class="mx-section-inner">
+    <h2>What's inside a UnityHaus wall</h2>
+    <p class="mx-lead">Eight layers, each with one job: keep the air in, the water out and the heat where it belongs. This is the wall of our Oshawa ADU, drawn to real thickness.</p>
+    <div class="mx-stage" data-mx="wall">
+      <p class="mx-cap">Oshawa ADU wall · inside to outside · drawn to real thickness</p>
+      <div class="mx-wall" role="img" aria-label="Wall layers from inside to outside: drywall 1/2 inch, INTELLO Plus membrane, double 2x4 studs with insulation 8 inches, OSB sheathing 5/8 inch, SIGA Majvest weather barrier, ROCKWOOL Comfortboard 80 6 inches, rainscreen strapping 3/4 inch, HardiePlank siding 5/16 inch."></div>
+      <div class="mx-wall-total"><div><span class="mx-big"><span data-count="16.2" data-dec="1" data-delay="2400">16.2</span>″</span> total wall thickness</div><div><span class="mx-big">R-60+</span> continuous insulation</div></div>
+    </div>
+  </div>
+</section>
 
 <!-- APPROACH -->
 <section id="approach">
@@ -801,8 +805,8 @@
       </div>
       <div class="build-card">
         <span class="build-tag">Luxury construction</span>
-        <h3>Built to last 100 years</h3>
-        <p>Continuous insulation, an airtight envelope, and moisture detailing done right &mdash; these are what decide whether a house lasts 30 years or 100.</p>
+        <h3>Built to last 150 years</h3>
+        <p>Continuous insulation, an airtight envelope, and moisture detailing done right &mdash; these are what decide whether a house lasts 30 years or 150.</p>
       </div>
       <div class="build-card">
         <span class="build-tag">Move-in ready</span>
@@ -952,5 +956,6 @@
     });
   })();
 </script>
+<script src="/motion.js" defer></script>
 </body>
 </html>
