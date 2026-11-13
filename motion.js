@@ -1,5 +1,6 @@
 /* UnityHaus motion graphics.
-   Each [data-mx] block animates once, the first time it scrolls into view.
+   Each [data-mx] block animates every time it scrolls into view (and again
+   when a visitor comes back to the page).
    Numbers are written in the HTML at their final values, so search engines,
    AI tools and visitors with "reduce motion" always see the real figures. */
 (function () {
@@ -17,10 +18,12 @@
   function countUp(el) {
     var to = parseFloat(el.dataset.count), from = parseFloat(el.dataset.from || 0), delay = +(el.dataset.delay || 0);
     if (reduce || isNaN(to)) return;
+    var tok = el._mxTok = (el._mxTok || 0) + 1;
     el.textContent = fmt(from, el);
     setTimeout(function () {
       var t0 = null;
       function step(t) {
+        if (el._mxTok !== tok) return;
         if (!t0) t0 = t;
         var p = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - p, 3);
         el.textContent = fmt(from + (to - from) * e, el);
@@ -173,18 +176,20 @@
     ['What ACH50 does a Passive House need?', '<b>0.6 ACH50 or less</b>, verified with a blower door test.']
   ];
   function startTyping(root) {
-    var typed = root.querySelector('.mx-typed-text'), ans = root.querySelector('.mx-answer'), qi = 1, timer;
+    var typed = root.querySelector('.mx-typed-text'), ans = root.querySelector('.mx-answer'), qi = 1;
     if (!typed || reduce) return;
+    clearTimeout(root._mxTimer);
+    var timer = { set: function (f, ms) { root._mxTimer = setTimeout(f, ms); } };
     function next() {
       var q = QA[qi % QA.length], n = 0;
       ans.style.opacity = 0;
       (function tick() {
         typed.textContent = q[0].slice(0, n);
-        if (n < q[0].length) { n++; timer = setTimeout(tick, 38 + Math.random() * 40); }
-        else { ans.innerHTML = q[1]; ans.style.opacity = 1; qi++; timer = setTimeout(next, 3400); }
+        if (n < q[0].length) { n++; timer.set(tick, 38 + Math.random() * 40); }
+        else { ans.innerHTML = q[1]; ans.style.opacity = 1; qi++; timer.set(next, 3400); }
       })();
     }
-    timer = setTimeout(next, 3000);
+    timer.set(next, 3000);
   }
 
   /* ---------- cost: stacked bar ---------- */
@@ -239,8 +244,12 @@
   function check() {
     var vh = window.innerHeight || document.documentElement.clientHeight;
     blocks.forEach(function (el) {
-      if (el.dataset.mxDone) return;
       var r = el.getBoundingClientRect();
+      if (el.dataset.mxDone) {
+        /* fully scrolled out of view: re-arm so it plays again next time */
+        if (r.bottom < 0 || r.top > vh) { delete el.dataset.mxDone; el.classList.remove('play'); }
+        return;
+      }
       if (r.top < vh * 0.88 && r.bottom > vh * 0.12) { el.dataset.mxDone = '1'; play(el); }
     });
     if (ervEl && !reduce) {
@@ -251,6 +260,12 @@
   window.addEventListener('scroll', check, { passive: true });
   window.addEventListener('resize', check);
   window.addEventListener('load', check);
+  /* back/forward navigation restores the page as it was; replay everything */
+  window.addEventListener('pageshow', function (e) {
+    if (!e.persisted) return;
+    blocks.forEach(function (el) { delete el.dataset.mxDone; el.classList.remove('play'); });
+    check();
+  });
   setInterval(check, 500);
   check();
 })();
