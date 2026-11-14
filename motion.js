@@ -101,7 +101,7 @@
       cx.textAlign = align;
       lines.forEach(function (ln, i) {
         var last = i === lines.length - 1;
-        cx.font = last ? '600 30px "DM Sans", sans-serif' : '400 24px "DM Sans", sans-serif';
+        cx.font = last ? '600 30px "Figtree", sans-serif' : '400 24px "Figtree", sans-serif';
         cx.fillStyle = last ? color : '#1C1C1A'; cx.fillText(ln, x, y + i * 30);
       });
     }
@@ -131,7 +131,7 @@
         }
       });
       cx.fillStyle = 'rgba(255,255,255,.92)'; cx.fillRect(CX - 120, CY - R - 46, 240, 36);
-      cx.fillStyle = '#174F36'; cx.font = '600 24px "DM Sans", sans-serif'; cx.textAlign = 'center'; cx.fillText('Energy exchanging core', CX, CY - R - 20);
+      cx.fillStyle = '#174F36'; cx.font = '600 24px "Figtree", sans-serif'; cx.textAlign = 'center'; cx.fillText('Energy exchanging core', CX, CY - R - 20);
       label(['Fresh air', 'from outside', '−15°C'], BX0 - 30, 120, 'right', '#3C82D7');
       label(['Exhaust', 'to outside', '−9°C'], BX0 - 30, 360, 'right', '#3C82D7');
       label(['Stale air', 'from rooms', '21°C'], BX1 + 30, 120, 'left', '#D95A3C');
