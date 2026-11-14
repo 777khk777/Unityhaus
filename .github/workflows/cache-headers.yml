@@ -1,0 +1,37 @@
+name: Add cache headers to server .htaccess
+
+# One-off, run by hand. Merges a "no-cache for HTML pages" block into the
+# server's existing /public_html/.htaccess (keeping everything already there),
+# so the host's NGINX cache always checks for the newest version of each page.
+on:
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp >/dev/null
+      - name: Merge cache block into .htaccess
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          set -e
+          cd "$RUNNER_TEMP"
+          if lftp -p 921 -u "peter@unityhaus.ca,$FTP_PASSWORD" -e "set ftp:ssl-allow no; set net:max-retries 2; get /public_html/.htaccess -o htaccess; bye" ftp.unityhaus.ca 2>/dev/null; then
+            echo "Existing .htaccess found: $(wc -l < htaccess) lines (kept as-is)"
+            cp htaccess htaccess.backup
+          else
+            echo "No existing .htaccess on the server; creating one"
+            : > htaccess
+          fi
+          if grep -q "BEGIN UnityHaus cache" htaccess; then
+            echo "Cache block already present; nothing to do"
+            exit 0
+          fi
+          printf '\n# BEGIN UnityHaus cache\n<IfModule mod_headers.c>\n  <FilesMatch "\\.(html|shtml)$">\n    Header set Cache-Control "no-cache, must-revalidate"\n  </FilesMatch>\n</IfModule>\n# END UnityHaus cache\n' >> htaccess
+          PUTS="put htaccess -o /public_html/.htaccess;"
+          [ -f htaccess.backup ] && PUTS="put htaccess.backup -o /public_html/.htaccess.backup-unityhaus; $PUTS"
+          lftp -p 921 -u "peter@unityhaus.ca,$FTP_PASSWORD" -e "set ftp:ssl-allow no; set net:max-retries 2; $PUTS bye" ftp.unityhaus.ca
+          echo "Cache block added:"
+          sed -n '/BEGIN UnityHaus cache/,/END UnityHaus cache/p' htaccess
